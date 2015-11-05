@@ -19,7 +19,7 @@ app.get('/users', function(req, res) {
     var header = 'Name,Email,Phone\n';
     res.write(header);
 
-    var query = connection.query('SELECT * FROM users LIMIT 300000');
+    var query = connection.query('SELECT * FROM users');
 
     query
         .on('error', function(err) {
